@@ -1,0 +1,100 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #af4919;
+    color: #333;
+  }
+  
+  header {
+    background-color: #003b80;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  /* Ocultar los radios */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Menú tipo pestañas */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs label {
+    padding: 12px 20px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tabs label:hover {
+    background-color: #d0d0d0;
+  }
+  
+  /* Estilo cuando está activo */
+  #inicio:checked ~ .tabs label[for="inicio"],
+  #sub1:checked ~ .tabs label[for="sub1"],
+  #sub2:checked ~ .tabs label[for="sub2"],
+  #sub3:checked ~ .tabs label[for="sub3"] {
+    background-color: #43ad40;
+    color: white;
+  }
+  
+  /* Contenido oculto por defecto */
+  .tab-content {
+    display: none;
+    border-top: 2px solid #003b80;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Mostrar el contenido correspondiente */
+  #inicio:checked ~ .contenido #inicio-content,
+  #sub1:checked ~ .contenido #sub1-content,
+  #sub2:checked ~ .contenido #sub2-content,
+  #sub3:checked ~ .contenido #sub3-content {
+    display: block;
+  }
+  
+  /* Animación suave */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  footer {
+    background-color: #003b80;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  .imagen-pequena {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+  }
+  
